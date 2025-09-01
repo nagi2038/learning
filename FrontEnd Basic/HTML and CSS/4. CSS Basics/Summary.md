@@ -27,6 +27,15 @@
     - [word-spacing](#word-spacing)
     - [text-align](#text-align)
     - [line-height](#line-height)
+  - [Colors ( Color Name, HEX, RGB, HSL )](#colors--color-name-hex-rgb-hsl-)
+    - [color Names](#color-names)
+    - [Hexidecimal Values](#hexidecimal-values)
+    - [RGB Values](#rgb-values)
+    - [HSL Values](#hsl-values)
+  - [Specificity](#specificity)
+  - [Backgrounds](#backgrounds)
+    - [Linear gradient](#linear-gradient)
+  - [Styling links](#styling-links)
 
 **_SECTION INTRO_**
 
@@ -515,3 +524,108 @@ line-height: revert;
 line-height: revert-layer;
 line-height: unset;
 ```
+
+## Colors ( Color Name, HEX, RGB, HSL )
+
+| colors           | small desc        |
+| :--------------- | :---------------- |
+| color            | Text Colors       |
+| background-color | Background colors |
+| border           | Border Colors     |
+| outline          | Outline Colors    |
+| box-shadow       | Box drop Shadows  |
+| text-shadow      | Text Drop Shadows |
+| fill             | SVG fill colors   |
+
+### color Names
+
+- red, blue, green, yellow, etc
+- darkred, darkblue, darkgreen, etc
+- lightred, lightblue,lightgreen, etc
+- mediumred, mediumblue, mediumgreen, etc
+- coral, chocolate, crimsom, khaki, etc
+
+[color-names](https://htmlcolorcodes.com/color-names/)
+
+### Hexidecimal Values
+
+`#AA 39 39`
+`#RED GREEN BLUE`
+
+- Made up of 6 digits organizedin paris for RGB
+- Range from `00` to `FF` where `00`  means no intensity and `FF` means max intenisty.
+- Letters represent the intensity greater than 9. A represents 10, B->11 and so on.
+
+### RGB Values
+
+- Made up of 3 paris of digits from `0-255` -> `(0,0,0)=> black` `(255,255,255) => white`
+- `0` means no intensity and `255` means max intensity.
+- We can also use `rgba(0,0,0,0.5)` which include alpha (transparency)
+- Transprency is useful for image overlays
+
+### HSL Values
+
+- Specify by hue, staturation, lightness
+- Measured by degrees on a color wheel from `0` to `360`
+- The lightness and staturation value range form `0%` to `100%`
+
+`opcaity : 1;` this will effect entire class or element.
+
+## Specificity
+
+Specificity is an algorithm that **_calculate the weight_** that is applied to a given CSS declaration.
+
+1. Inline CSS (Style attribute) - high specificity
+2. ID #
+3. Class .
+4. Element
+
+> Important > Inline > ID > Class > Element
+
+- if the specifity is same most recent will be applied.
+- `!important` will have high specificity than any other.
+- Don't use `!important` very often unless it is required.
+
+```css
+h1 {
+  color : red !important;
+}
+```
+
+## Backgrounds
+
+- `background-color`
+- `background-image` repeats image by default.
+- `background-repeat` set value to `no-repeat` image don't repeat
+- `background-size` set value to `cover` will cover entire div/tag
+- `background-postion` set value to `center` I'm will always reamins at center.
+
+short hand for every thing : `background`
+
+```css
+background : url("./hero.jpg") no-repeat center/cover;
+background-attachment: fixed;
+```
+
+### Linear gradient
+
+```css
+ /* Linear gradient */
+background: linear-gradient(to bottom, lightblue, darkblue);
+background: linear-gradient(to left, lightgreen, darkblue);
+background: linear-gradient(to bottom left, lightgreen, darkblue);
+```
+
+## Styling links
+
+| states     | description               |
+| :--------- | :------------------------ |
+| `a:link`   | Normal unvisted link      |
+| `a:hover`  | Link when hovered         |
+| `a:active` | Moment link is clicked    |
+| `a:focus`  | Moment link recives focus |
+| `a:visted` | Link user has visted      |
+
+## Font awesome
+
+[font awesome](https://fontawesome.com/)
