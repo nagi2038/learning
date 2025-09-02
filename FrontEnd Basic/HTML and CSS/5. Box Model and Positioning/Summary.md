@@ -8,6 +8,7 @@
   - [Padding](#padding)
   - [Margin](#margin)
   - [Universal Selector \& Reset](#universal-selector--reset)
+  - [Border](#border)
 
 ## Section Intro
 
@@ -90,5 +91,40 @@ What is auto margin?
 ```css
 *{
   margin : 0;
+}
+```
+
+## Border
+
+border is  element outter bound part
+
+```css
+.box{
+  /* short hand */
+  border: 2px solid black;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+}
+```
+
+- with out `border-width` `border-color` `border-style` makes no sence
+
+```css
+
+.box-1 {
+  border: none;
+  border-top: 4px solid blue;
+  border-bottom: 2px solid green;
+}
+
+.box-2 {
+  border-radius: 10px;
+}
+
+.box-3 {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 ```
