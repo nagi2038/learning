@@ -9,6 +9,8 @@
   - [Margin](#margin)
   - [Universal Selector \& Reset](#universal-selector--reset)
   - [Border](#border)
+  - [Display property](#display-property)
+  - [Position Property](#position-property)
 
 ## Section Intro
 
@@ -128,3 +130,66 @@ border is  element outter bound part
   border-bottom-right-radius: 50px;
 }
 ```
+
+## Display property
+
+- none
+- block
+- inline
+- inline-block
+- flex
+- grid
+- table
+- table-row
+- table-cell
+- list-item
+- inherit
+- initial
+
+```css
+.none-el {
+  display: none;
+}
+
+.hidden-el {
+  visibility: hidden;
+}
+
+p {
+  background-color: lightblue;
+  display: block;
+}
+
+a {
+  background-color: lightcoral;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+}
+```
+
+## Position Property
+
+- static - Default value
+- relative
+- absolute - can be a child of relative
+- fixed - fixed on the page
+- sticky - fixed + relative
+
+**_STATIC_**
+
+if `postion` is **_static_** we can't use `top` `left` `right` `bottom` attributes.
+
+**_RELATIVE_**
+
+if `postion` is **_relative_** we can use `top` `left` `right` `bottom` attributes.
+
+**_FIXED_**
+
+if `postion` is **_fixed_** we can use `top` `left` `right` `bottom` attributes.
+
+**_sticky_**
+
+if `postion` is **_sticky_** we can use `top` `left` `right` `bottom` attributes.
