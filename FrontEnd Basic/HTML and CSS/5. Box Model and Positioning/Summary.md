@@ -11,6 +11,7 @@
   - [Border](#border)
   - [Display property](#display-property)
   - [Position Property](#position-property)
+  - [Box Shadow](#box-shadow)
 
 ## Section Intro
 
@@ -193,3 +194,75 @@ if `postion` is **_fixed_** we can use `top` `left` `right` `bottom` attributes.
 **_sticky_**
 
 if `postion` is **_sticky_** we can use `top` `left` `right` `bottom` attributes.
+
+```css
+.box1 {
+  position: static; /* by default it is static */
+  left: 10px;
+}
+
+.box2 {
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+
+.box3 {
+  position: fixed;
+  right: 5px;
+  z-index : 2;
+}
+
+.box4 {
+  position: sticky;
+  top: 5px;
+}
+
+.box5 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: lightcoral;
+}
+
+.box6 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+```
+
+- fixed element by defaults goes to behind of relative element
+- `z-index`  can be used to move the element in z direction.
+- `z-index` do not work on `static` element
+- `z-index` can be negative also.
+
+## Box Shadow
+
+```css
+.shadow{
+  box-shadow : 5px 6px 8px 6px #000
+  /* Horizontal offset, vertical offset, blur radius, spread radius, Color */
+}
+```
+
+- Horizontal & Vertical Offset - How far from the element each way
+- Blur Radius ( Optional ) - How Blury the shadow is
+- Spread Radius ( optional ) - How much the shadow should grow or shrink
+
+```css
+
+.box-1 {
+  box-shadow: -10px -10px 10px 2px rgb(230, 191, 36);
+}
+
+.box-2 {
+  box-shadow: 5px 5px 10px 2px black;
+}
+
+.box-3 {
+  box-shadow:
+    5px 5px 10px 2px black,
+    -5px -5px 10px 2px red;
+}
+```
